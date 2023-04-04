@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="CSS/styles.css" type="text/css">
     <script src="JS/scripts.js"></script>
     <title>Big Bank of E.E</title>
 </head>
@@ -14,7 +15,7 @@
         <input type="text" name="money" id="money">
         <button type="submit">Open Account</button>
     </form>
-    
+
     <form id="deposit-withdraw">
         <h2>Deposit or Withdraw Funds:</h2>
         <label for="deposit">Deposit Amount:</label>
@@ -24,10 +25,16 @@
         <button type="submit">Submit</button>
     </form>
 
-    <div id="current-balance">
+    <div id="current-balance" class="hidden">
         <p>Current Balance:</p>
         <p id="amount"></p>
+        <p>Account Number:</p>
+        <p id="accountNumber"></p>
+        <p>Acount Holder:</p>
+        <p id="accountHolder"></p>
+        <button id="accountMaker">Create Account!</button>
     </div>
 
+    
 </body>
 </html>

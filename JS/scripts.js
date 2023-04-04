@@ -40,6 +40,12 @@ function handleAccountSubmit(e) {
     const inputtedFunds = parseInt(document.getElementById("money").value);
     let newAccount = new BankAccount(inputtedName, inputtedFunds);
     bigBank.addAccount(newAccount);
+    displayCurrentBalance()
+    document.getElementById("name").value = null;
+    document.getElementById("money").value = null;
+
+    document.getElementById("initiate-account").setAttribute("class", "hidden");
+    document.getElementById("current-balance").removeAttribute("class")
 }
 
 function handleDepositAndWithraw(e) {
@@ -52,9 +58,25 @@ function handleDepositAndWithraw(e) {
     if (inputtedWithdraw !== "") {
         bigBank.accounts["1"].withdraw(inputtedWithdraw);
     }
+    displayCurrentBalance()
+    document.getElementById("deposit").value = null;
+    document.getElementById("withdraw").value = null;
+}
+
+function showAccountCreater() {
+    document.getElementById("initiate-account").removeAttribute("class");
+    document.getElementById("current-balance").setAttribute("class", "hidden")
+}
+
+function displayCurrentBalance() {
+    let account = Object.keys(bigBank.accounts).pop()
+    document.getElementById("amount").innerText = "$" + bigBank.accounts[account].checking;
+    document.getElementById("accountNumber").innerText = bigBank.accounts[account].id;
+    document.getElementById("accountHolder").innerText = bigBank.accounts[account].name;
 }
 
 window.addEventListener("load", function() {
     document.querySelector("form#initiate-account").addEventListener("submit", handleAccountSubmit);
     document.querySelector("form#deposit-withdraw").addEventListener("submit", handleDepositAndWithraw)
+    document.querySelector("button#accountMaker").addEventListener("click", showAccountCreater)
 });

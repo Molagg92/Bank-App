@@ -38,8 +38,9 @@ Expected Output: account1 = 15800 !!
 
 ---------------------
 
-Test:
+Describe: function handleDepositAndWithraw(e) {}
+Test:should add and subtract from the checking account while updatig the UI to show the correct amount in our chacking account"
 Code:
-Expected Output:
+Expected Output: :)
 
 ---------------------
