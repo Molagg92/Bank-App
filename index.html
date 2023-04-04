@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <script src="JS/scripts.js"></script>
-    <title>Document</title>
+    <title>Big Bank of E.E</title>
 </head>
 <body>
+    <h1>Welcome the Jungle</h1>
+    <form id="initiate-account">
+        <h2>Register a new account:</h2>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <label for="money">Initial Deposit:</label>
+        <input type="text" name="money" id="money">
+        <button type="submit">Open Account</button>
+    </form>
     
+    <form id="deposit-withdraw">
+        <h2>Deposit or Withdraw Funds:</h2>
+        <label for="deposit">Deposit Amount:</label>
+        <input type="text" name="deposit" id="deposit">
+        <label for="withdraw">Withdraw Amount:</label>
+        <input type="text" name="withdraw" id="withdraw">
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="current-balance">
+        <p>Current Balance:</p>
+        <p id="amount"></p>
+    </div>
+
 </body>
 </html>
