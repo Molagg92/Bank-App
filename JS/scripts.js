@@ -58,11 +58,13 @@ function handleDepositAndWithraw(e) {
 	e.preventDefault();
 	const inputtedDeposit = document.getElementById("deposit").value;
 	const inputtedWithdraw = document.getElementById("withdraw").value;
+	let account = Object.keys(bigBank.accounts).pop()
 	if (inputtedDeposit !== "") {
-			bigBank.accounts["1"].deposit(inputtedDeposit);
+			bigBank.accounts[account].deposit(inputtedDeposit);
+			document.querySelector("img").removeAttribute("class");
 	}
 	if (inputtedWithdraw !== "") {
-			bigBank.accounts["1"].withdraw(inputtedWithdraw);
+			bigBank.accounts[account].withdraw(inputtedWithdraw);
 	}
 	displayCurrentBalance()
 	document.getElementById("deposit").value = null;

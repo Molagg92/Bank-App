@@ -1,3 +1,39 @@
+
+
+form {
+  margin: 12px;
+  padding: 12px;
+}
+
+button {
+  margin: 12px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 5px rgb(0, 0, 1);
+}
+
+input {
+  margin: 12px;
+}
+
+#searchResult,
+#current-balance {
+  border: 2px solid black;
+  padding: 20px;
+}
+
+#searchResult p,
+#current-balance p {
+  font-weight: bold;
+}
+
+span {
+  font-weight: normal;
+}
+
 .hidden {
   display: none;
+}
+img{
+  width: 300px;
+  border: 1px solid black;
 }
