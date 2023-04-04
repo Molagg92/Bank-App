@@ -5,6 +5,7 @@
     <script src="JS/scripts.js"></script>
     <title>Big Bank of E.E</title>
 </head>
+
 <body>
     <h1>Welcome the Jungle</h1>
     <form id="initiate-account">
@@ -25,6 +26,12 @@
         <button type="submit">Submit</button>
     </form>
 
+    <form id="search">
+        <label for="searchInput"></label>
+        <input type="text" name="searchInput" id="searchInput">
+    <button type="submit" id="searchButton">Search for Account</button>
+    </form>
+
     <div id="current-balance" class="hidden">
         <p>Current Balance:</p>
         <p id="amount"></p>
@@ -33,7 +40,17 @@
         <p>Acount Holder:</p>
         <p id="accountHolder"></p>
         <button id="accountMaker">Create Account!</button>
+        
     </div>
+		<div id="searchResult" class="hidden">
+			<p>Current Balance:</p>
+			<p id="search-amount"></p>
+			<p>Account Number:</p>
+			<p id="search-accountNumber"></p>
+			<p>Acount Holder:</p>
+			<p id="search-accountHolder"></p>
+			<!-- <button id="search-accountMaker">Create Account!</button> -->
+		</div>
 
     
 </body>
